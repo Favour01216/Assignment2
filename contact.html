@@ -8,48 +8,89 @@
   </head>
 
   <body>
-    <!-- Header -->
     <header class="structural">
       <h1>Famous Person's Biography</h1>
       <p>A brief overview of their life</p>
     </header>
 
-    <!-- Navigation -->
-    <nav class="structural">
+    <nav class="menu">
       <ul>
-        <li><a href="index.html">Biography</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#">Media</a>
+          <ul class="sub-menu">
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="media.html">Video</a></li>
+          </ul>
+        </li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="media.html">Media</a></li>
       </ul>
     </nav>
 
-    <!-- Main Content -->
     <section>
       <main class="structural">
         <h2>Contact Us</h2>
         <form>
           <div>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required autofocus />
+            <label for="firstname">Firstname</label>
+            <input
+              type="text"
+              id="firstname"
+              name="lastname"
+              required
+              autofocus
+            />
           </div>
-
           <div>
-            <label for="email">Email:</label>
+            <label for="lastname">Lastname</label>
+            <input
+              type="text"
+              id="firstname"
+              name="lastname"
+              required
+              autofocus
+            />
+          </div>
+          <div>
+            <label for="email">Email</label>
             <input type="email" id="email" name="email" required />
           </div>
-
           <div>
-            <label for="comments">Comments:</label>
-            <textarea
-              id="comments"
-              name="comments"
-              rows="4"
+            <label for="Phone">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
               required
-            ></textarea>
+            />
           </div>
           <div>
-            <button type="submit" id="submit" value="submit">Submit</button>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+
+          <div>
+            <label for="help">What do you think of Leonardo Davinci?</label
+            ><br />
+            <textarea id="comment" name="comment" rows="4" required></textarea>
+          </div>
+          <div>
+            <label for="comment">Brief Discription of any other opinions</label>
+            <textarea id="comment" name="comment" rows="4" required></textarea>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              name="human"
+              id="human"
+              value="human"
+              required
+            />
+            <label for="human"> I am not a robot</label>
+          </div>
+          <div>
+            <input type="submit" id="submit" value="submit" />
           </div>
         </form>
       </main>
